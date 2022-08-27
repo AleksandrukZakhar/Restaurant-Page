@@ -1,5 +1,11 @@
 import "./styles.scss";
 import Background from "./assets/background.jpg";
+import pizza1 from "./assets/pizza-1.jpg";
+import pizza2 from "./assets/pizza-2.jpg";
+import pizza3 from "./assets/pizza-3.jpg";
+import pizza4 from "./assets/pizza-4.jpg";
+import pizza5 from "./assets/pizza-5.jpg";
+import pizza6 from "./assets/pizza-6.jpg";
 
 const Header = () => {
   const header = document.createElement("header");
@@ -57,5 +63,24 @@ const Home = () => {
   return main;
 };
 
+const Menu = () => {
+  const main = document.createElement("main");
+
+  const div = document.createElement("div");
+  div.classList.add("pizza-container");
+  main.appendChild(div);
+
+  const pizzas = [pizza1, pizza2, pizza3, pizza4, pizza5, pizza6];
+
+  for (let i = 1; i < 7; i++) {
+    const img = new Image();
+    img.src = pizzas[i];
+    img.alt = `pizza ${i}`;
+    div.appendChild(img);
+  }
+
+  return main;
+};
+
 document.body.appendChild(Header());
-document.body.appendChild(Home());
+document.body.appendChild(Menu());
