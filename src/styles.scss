@@ -64,6 +64,10 @@ main {
   }
 }
 
+.menu-main {
+  background-color: $white-primary;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -86,4 +90,22 @@ main {
 
 .title {
   font-size: 6rem;
+}
+
+.pizza-container {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-auto-rows: 400px;
+  gap: 2rem;
+
+  & > img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+
+    &:hover {
+      transition: 0.3s ease-in-out;
+      transform: scale(1.05);
+    }
+  }
 }
