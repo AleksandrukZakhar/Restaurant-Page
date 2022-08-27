@@ -39,6 +39,7 @@ let page = Home();
 
 const Menu = () => {
   const main = document.createElement("main");
+  main.classList.add("menu-main");
 
   const div = document.createElement("div");
   div.classList.add("pizza-container");
